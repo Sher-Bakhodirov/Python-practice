@@ -1,7 +1,9 @@
+# A simple program that randomly picks a number from 1 to 100. User has to guess the number. There is no limit of tries
+
 from random import randint
 computer = randint(1,101)
 user = []
-
+# A while loop was used to avoid interruption of the game after a user enters unexpexted value(this can not be avoided by exeption handling because exeption handiling would mean that user has to start evering again)
 while True:
     command = input('Enter your number\n')
     if not command.isdigit():

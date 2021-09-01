@@ -2,16 +2,18 @@
 
 products = {}
 
-# The following function is going to add a new product(name and price) to "products" nested dictionary
+
 def add():
+    '''This function is going to add a new product(name and price) to "products" nested dictionary'''
     name = input('Please enter the name of the product\n')
     price_in = input('Please enter the price of the product\n')
     products[name] = {}
     products[name]["price"] = price_in
     
-# The following fuction is going to add a new atribute to a certain product. Firts it asks for the name of the product
-# and checks if such product exists
+
 def new_atr():
+    '''This fuction is going to add a new atribute to a certain product. Firts it asks for the name of the product
+    and checks if such product exists'''
     product = input('Please enter the name of the product to which you want to add the attribute\n')
     if product in products:
         name = input('Please enter the name of the attribute\n')
@@ -20,8 +22,9 @@ def new_atr():
     else:
         print('No product was found')
         
-# The following function displays attributes of a certain product. First it checks if such product exits
+
 def lookup():
+    '''This function displays attributes of a certain product. First it checks if such product exits'''
     name = input("Please enter the name of the product\n")
     if name in products:
         for k,v in products[name].items():
@@ -29,8 +32,9 @@ def lookup():
     else:
         print('No product was found')
             
-# The following  function displays a names of all products
+
 def list_products():
+    '''The following  function displays a names of all products'''
     for i in products:
         print(i)
         

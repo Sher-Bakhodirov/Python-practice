@@ -51,3 +51,4 @@ while True:
         list_products()
     elif command == 5:
         break
+// test
